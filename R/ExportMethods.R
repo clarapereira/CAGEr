@@ -100,7 +100,8 @@ setMethod( "plotReverseCumulatives", "CAGEr"
 	#pdf(file = paste("CTSS_reverse_cumulatives_", values, "_all_samples.pdf", sep = ""), width = 8, height = 8, onefile = T, bg = "transparent", family = "Helvetica", fonts = NULL)
 	old.par <- par(mar = c(5,5,5,2))
 	on.exit(par(old.par))
-	cols <- names(sample.labels)
+	#cols <- names(sample.labels)
+	cols <- c(1:length(sample.labels))
 	
   tag.count <- switch( values
                      , raw        = CTSStagCountDF(object)
@@ -308,7 +309,8 @@ setMethod( "plotInterquantileWidth", "CAGEr"
          , function (object, clusters, tpmThreshold, qLow, qUp, xlim, ...) {
            
 	sample.labels <- sampleLabels(object)
-	cols <- names(sample.labels)
+	#cols <- names(sample.labels)
+	cols <- c(1:length(sample.labels))
 	clusters <- match.arg(clusters)
 	getClustFun <- switch( clusters
 	                     , tagClusters       = tagClustersGR
@@ -587,7 +589,8 @@ setMethod("exportToBed", "CAGEr", function( object, what, qLow, qUp
 		
 		names(clusters.q.list) <- sample.labels
 		itemRgb = FALSE
-		cols <- names(sample.labels)
+		#cols <- names(sample.labels)
+		cols <- c(1:length(sample.labels))
 		cols <- as.list(apply(sapply(cols, function(x) {as.integer(col2rgb(x))}), 2, function(y) {paste(y, collapse = ",")}))
 		names(cols) <- sample.labels
 
