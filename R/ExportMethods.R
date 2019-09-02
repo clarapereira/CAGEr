@@ -97,7 +97,7 @@ setMethod( "plotReverseCumulatives", "CAGEr"
                     , xlab, ylab, xlim, ylim) {
 	sample.labels <- sampleLabels(object)
 	values <- match.arg(values)
-	#pdf(file = paste("CTSS_reverse_cumulatives_", values, "_all_samples.pdf", sep = ""), width = 8, height = 8, onefile = T, bg = "transparent", family = "Helvetica", fonts = NULL)
+	pdf(file = paste("CTSS_reverse_cumulatives_", values, "_all_samples.pdf", sep = ""), width = 8, height = 8, onefile = T, bg = "transparent", family = "Helvetica", fonts = NULL)
 	old.par <- par(mar = c(5,5,5,2))
 	on.exit(par(old.par))
 	#cols <- names(sample.labels)
