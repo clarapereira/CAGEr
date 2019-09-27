@@ -1,7 +1,7 @@
 Package: CAGEr
 Title: Analysis of CAGE (Cap Analysis of Gene Expression) sequencing data for precise mapping of transcription start sites and promoterome mining
-Version: 1.27.0
-Date: 2019-04-25
+Version: 1.27.3
+Date: 2019-09-14
 Author: Vanja Haberle <vanja.haberle@gmail.com>
 Maintainer: Vanja Haberle <vanja.haberle@gmail.com>, Charles Plessy <charles.plessy@oist.jp>
 Imports:
@@ -14,10 +14,10 @@ Imports:
     formula.tools,
     GenomeInfoDb,
     GenomicAlignments,
-    GenomicRanges (>= 1.23.16),
+    GenomicRanges (>= 1.37.16),
     ggplot2 (>= 2.2.0),
     gtools,
-    IRanges (>= 2.5.27),
+    IRanges (>= 2.18.0),
     KernSmooth,
     memoise,
     plyr,
@@ -35,7 +35,7 @@ Imports:
 Depends:
     methods,
     MultiAssayExperiment,
-    R (>= 2.15.0)
+    R (>= 3.5.0)
 Suggests:
     BSgenome.Drerio.UCSC.danRer7,
     DESeq2,
@@ -81,6 +81,6 @@ Collate:
     'StrandInvaders.R'
 LazyData: true
 VignetteBuilder: knitr
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
